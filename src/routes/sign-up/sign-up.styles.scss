@@ -1,0 +1,56 @@
+.sign-in-container{
+    width: 80%;
+    margin: auto;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 0.07rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;  
+}
+
+input{
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid black;
+    background-color: #b0b2b0;
+    &:focus{
+        border: none;;
+        outline: none;
+        background-color: #e8eae8;
+    }
+}
+
+label{
+    margin-top: 1.5rem;
+}
+
+h1{
+    width: 30%;
+    margin: auto;
+}
+
+button{
+    height: 2.4rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: none;
+    background-color: #0c9d77;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 200;
+    letter-spacing: 0.06rem;
+    cursor: pointer;
+    margin-top: 2.5rem;
+}
+
+.error-sign-up{
+    color:red;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.15rem;
+}

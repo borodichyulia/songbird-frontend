@@ -1,0 +1,75 @@
+@mixin container($flex-direction, $font-size, $font-weight, $space-between){
+    display: flex;
+    flex-direction: $flex-direction;
+    font-size: $font-size;
+    color: white;
+    font-weight: $font-weight;
+    width: 100%;
+    justify-content: $space-between;
+}
+
+.navigation-container{
+    display: flex;
+    flex-direction: column; 
+    width: 80%;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.main-navigation-container {
+    @include container(row, 1.5rem, 400, space-between);
+    align-items: baseline;
+}
+
+.secondary-navigation-container{
+    @include container(row, 1.4rem, 300, space-around);
+    background-color: #0c9d77;
+    height: 2.7rem;
+    align-items: center;
+    border-radius: 0.3rem;
+    margin-top: 1.4rem;
+
+    &.authorization-none{
+        display: none;
+    }
+}
+
+.logo-container{
+    font-family: 'Dancing Script', cursive;
+    font-size: 56px;
+}
+
+.logo-container span{
+    color: #12D09D;
+}
+
+.nav-link{
+    width: 16.6%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+
+    &.select{
+        background-color: #12D09D;
+    }
+}
+
+.score{
+    width: 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+}
+
+button{
+    margin-top: 0rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    &:hover{
+        color: #0c9d77;
+    }
+}
