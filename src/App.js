@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import Navigation from '../src/routes/navigation/navigation.component';
+import Home from '../src/routes/home/home.component';
+import EndGame from '../src/components/end-game/end-game.components';
+import SignUp from '../src/routes/sign-up/sign-up.component';
+import SignIn from '../src/routes/sign-in/sign-in.component';
+import { RequireAuth } from '../src/hoc/requireAuth';
+import { RequireLevel } from '../src/hoc/requireLevel';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Navigation />}>
+          <Route path='home' element={
+            <RequireAuth>
+              <RequireLevel>
+                <Home />
+              </RequireLevel>
+            </RequireAuth>
+          }/>
+          <Route path='signin' element={<SignIn />} />
+          <Route path='signup' element={<SignUp />} />
+          <Route path='end' element={<EndGame />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
 export default App;
+
+
+

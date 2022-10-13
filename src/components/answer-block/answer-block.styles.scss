@@ -1,0 +1,38 @@
+.answer-block-container{
+    width: 49%;
+    background-color: #363736;
+    padding: 1rem 1.3rem;
+    box-sizing: border-box;
+    border-radius: 0.2em;
+    border: 0.1rem solid #4e504e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.answer-block-container .name-bird{
+    font-size: 1.5rem;
+}
+
+.answer-block-container hr{
+    margin: 0.5rem 0;
+}
+
+.kind-bird{
+    color: white;
+    font-size: 1rem;
+}
+
+.description-bird{
+    width: -webkit-fill-available;
+    margin-left: 1.7rem;
+}
+
+.information-bird{
+    display: flex;
+}
+
+.text-description-bird{
+    color: white;
+    font-weight: 100;
+}

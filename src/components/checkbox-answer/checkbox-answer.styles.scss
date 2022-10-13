@@ -1,0 +1,64 @@
+.hello:checked{
+    background-color: red;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    padding-left: 2.8rem;
+    cursor: pointer;
+    align-items: center;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    user-select: none;
+    color: white;
+    font-weight: 100;
+    height: 3.5rem;
+    border-bottom: 0.1rem solid #4e504e;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: auto;
+    left: 1.3rem;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    &.red{
+        background-color: red;
+    }
+    &.green{
+        background-color: #12D09D;
+    }
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
